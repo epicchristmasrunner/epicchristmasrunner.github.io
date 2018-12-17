@@ -1,6 +1,5 @@
 function startGame() {
   gameArea.start();
-  gameArea.canvas;
 }
 
 var gameArea = {
