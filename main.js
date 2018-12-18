@@ -9,7 +9,7 @@ function startGame() {
     gameArea.start();
 }
 
-var c = {
+var gameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
         this.canvas.width = window.innerWidth - 10;
