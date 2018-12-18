@@ -5,7 +5,7 @@ var spedman = 1;
 
 function startGame() {
     backgroundMusic = new sound("https://ia801203.us.archive.org/25/items/TobyFoxMegalovania/Toby%20Fox%20-%20Megalovania.mp3");
-    person = new component(30, 30, "red", 10, 120);
+    person = new component(30, 30, "santa.png", 10, 120, "image");
     backgroundMusic.play();
     gameArea.start();
 }
@@ -36,7 +36,12 @@ function everyinterval(n) {
   return false;
 }
 
-function component(width, height, color, x, y) {
+function component(width, height, color, x, y, type) {
+    this.type = type;
+    if (type == "image") {
+        this.image = new Image();
+        this.image.src = color;
+    }
     this.width = width;
     this.height = height;
     this.x = x;
@@ -45,10 +50,16 @@ function component(width, height, color, x, y) {
     this.speedY = 0;
     this.gravity = 0.05;
     this.gravitySpeed = 0;
-    this.update = function(){
-        ctx = gameArea.context;
-        ctx.fillStyle = color;
-        ctx.fillRect(this.x, this.y, this.width, this.height);
+    this.update = function() {
+    ctx = myGameArea.context;
+    if (type == "image") {
+      ctx.drawImage(this.image, 
+        this.x, 
+        this.y,
+        this.width, this.height);
+    } else {
+      ctx.fillStyle = color;
+      ctx.fillRect(this.x, this.y, this.width, this.height);
     }
     this.newPos = function() {
         this.gravitySpeed += this.gravity;
