@@ -30,6 +30,6 @@ var gameArea = {
  }
 
 function updateGameArea() {
-  gameArea.clear();
+  //gameArea.clear();
   person.update();
 }
