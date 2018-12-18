@@ -1,6 +1,7 @@
 var person;
 var backgroundMusic;
 var myObstacles = [];
+var spedman = 1;
 
 function startGame() {
     backgroundMusic = new sound("https://www.feltmusic.com/audio/128/felt004_321_the_oracle_of_delphi_v1.mp3");
@@ -117,7 +118,7 @@ function updateGameArea() {
         myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
     }
     for (i = 0; i < myObstacles.length; i += 1) {
-        myObstacles[i].x += -1;
+        myObstacles[i].x += -spedman;
         myObstacles[i].update();
     }
     //========
@@ -130,4 +131,5 @@ function updateGameArea() {
     if (gameArea.key && gameArea.key == 40) {person.speedY = 4; }
     person.newPos();
     person.update();
+    spedman+=0.001;
 }
