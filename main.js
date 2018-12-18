@@ -1,7 +1,10 @@
 var person;
+var backgroundMusic;
 
 function startGame() {
+    backgroundMusic = new sound("https://www.feltmusic.com/audio/128/felt004_321_the_oracle_of_delphi_v1.mp3");
     person = new component(30, 30, "red", 10, 120);
+    backgroundMusic.play();
     gameArea.start();
 }
 
@@ -41,6 +44,21 @@ function component(width, height, color, x, y) {
         this.x += this.speedX;
         this.y += this.speedY; 
     } 
+}
+
+function sound(src) {
+  this.sound = document.createElement("audio");
+  this.sound.src = src;
+  this.sound.setAttribute("preload", "auto");
+  this.sound.setAttribute("controls", "none");
+  this.sound.style.display = "none";
+  document.body.appendChild(this.sound);
+  this.play = function(){
+    this.sound.play();
+  }
+  this.stop = function(){
+    this.sound.pause();
+  }
 }
 
 function updateGameArea() {
