@@ -51,7 +51,7 @@ function component(width, height, color, x, y, type) {
     this.gravity = 0.05;
     this.gravitySpeed = 0;
     this.update = function() {
-        ctx = myGameArea.context;
+        ctx = gameArea.context;
         if (type == "image") {
             ctx.drawImage(this.image, 
                 this.x, 
