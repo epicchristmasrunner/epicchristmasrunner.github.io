@@ -14,10 +14,10 @@ var gameArea = {
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.interval = setInterval(updateGameArea, 20);
         window.addEventListener('keydown', function (e) {
-            myGameArea.key = e.keyCode;
+            gameArea.key = e.keyCode;
         })
         window.addEventListener('keyup', function (e) {
-            myGameArea.key = false;
+            gameArea.key = false;
         })
         },
     clear : function() {
