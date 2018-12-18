@@ -35,14 +35,20 @@ function component(width, height, color, x, y) {
     this.y = y;
     this.speedX = 0;
     this.speedY = 0;
+    this.gravity = 0.05;
+    this.gravitySpeed = 0;
     this.update = function(){
         ctx = gameArea.context;
         ctx.fillStyle = color;
         ctx.fillRect(this.x, this.y, this.width, this.height);
     }
     this.newPos = function() {
+        this.gravitySpeed += this.gravity;
+        if (this.y < 300) {
+            this.gravitySpeed = 0;
+        }
         this.x += this.speedX;
-        this.y += this.speedY; 
+        this.y += this.speedY + this.gravitySpeed; 
     } 
 }
 
