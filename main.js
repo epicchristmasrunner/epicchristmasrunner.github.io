@@ -45,10 +45,10 @@ function component(width, height, color, x, y) {
 
 function updateGameArea() {
     gameArea.clear();
-    if (person.key && person.key == 37) {person.speedX = -1; }
-    if (person.key && person.key == 39) {person.speedX = 1; }
-    if (person.key && person.key == 38) {person.speedY = -1; }
-    if (person.key && person.key == 40) {person.speedY = 1; }
+    if (gameArea.key && gameArea.key == 37) {person.speedX = -1; }
+    if (gameArea.key && gameArea.key == 39) {person.speedX = 1; }
+    if (gameArea.key && gameArea.key == 38) {person.speedY = -1; }
+    if (gameArea.key && gameArea.key == 40) {person.speedY = 1; }
     person.newPos();
     person.update();
 }
