@@ -9,7 +9,7 @@ function startGame() {
     gameArea.start();
 }
 
-var gameArea = {
+var c = {
     canvas : document.createElement("canvas"),
     start : function() {
         this.canvas.width = window.innerWidth - 10;
@@ -31,7 +31,7 @@ var gameArea = {
 }
 
 function everyinterval(n) {
-  if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
+  if ((gameArea.frameNo / n) % 1 == 0) {return true;}
   return false;
 }
 
@@ -102,11 +102,11 @@ function updateGameArea() {
       return;
     } 
   }
-  myGameArea.clear();
-  myGameArea.frameNo += 1;
-  if (myGameArea.frameNo == 1 || everyinterval(150)) {
-    x = myGameArea.canvas.width;
-    y = myGameArea.canvas.height - 200
+  gameArea.clear();
+  gameArea.frameNo += 1;
+  if (gameArea.frameNo == 1 || everyinterval(150)) {
+    x = gameArea.canvas.width;
+    y = gameArea.canvas.height - 200
     myObstacles.push(new component(10, 200, "green", x, y));
   }
   for (i = 0; i < myObstacles.length; i += 1) {
