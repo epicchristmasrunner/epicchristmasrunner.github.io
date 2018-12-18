@@ -4,7 +4,7 @@ var myObstacles = [];
 var spedman = 1;
 
 function startGame() {
-    backgroundMusic = new sound("https://www.feltmusic.com/audio/128/felt004_321_the_oracle_of_delphi_v1.mp3");
+    backgroundMusic = new sound("https://ia801203.us.archive.org/25/items/TobyFoxMegalovania/Toby%20Fox%20-%20Megalovania.mp3");
     person = new component(30, 30, "red", 10, 120);
     backgroundMusic.play();
     gameArea.start();
