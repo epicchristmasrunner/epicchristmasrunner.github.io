@@ -61,12 +61,18 @@ function sound(src) {
   }
 }
 
+function keyboardController(speed, gameObj) {
+    gameObj.speedX = 0;
+    gameObj.speedY = 0;
+    if (gameArea.key && gameArea.key == 37) {gameObj.speedX = -speed; }
+    if (gameArea.key && gameArea.key == 39) {gameObj.speedX = speed; }
+    if (gameArea.key && gameArea.key == 38) {gameObj.speedY = -speed; }
+    if (gameArea.key && gameArea.key == 40) {gameObj.speedY = speed; }
+}
+
 function updateGameArea() {
     gameArea.clear();
-    if (gameArea.key && gameArea.key == 37) {person.speedX = -1; }
-    if (gameArea.key && gameArea.key == 39) {person.speedX = 1; }
-    if (gameArea.key && gameArea.key == 38) {person.speedY = -1; }
-    if (gameArea.key && gameArea.key == 40) {person.speedY = 1; }
+    keyboardController(4, player);
     person.newPos();
     person.update();
 }
