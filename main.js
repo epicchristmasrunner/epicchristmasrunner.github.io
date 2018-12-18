@@ -44,7 +44,7 @@ function component(width, height, color, x, y) {
     }
     this.newPos = function() {
         this.gravitySpeed += this.gravity;
-        if (this.y < 300) {
+        if (this.y > 300) {
             this.gravitySpeed = 0;
         }
         this.x += this.speedX;
