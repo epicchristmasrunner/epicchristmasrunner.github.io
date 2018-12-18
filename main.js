@@ -107,8 +107,8 @@ function updateGameArea() {
     gameArea.frameNo += 1;
     if (gameArea.frameNo == 1 || everyinterval(150)) {
         x = gameArea.canvas.width;
-        minHeight = 20;
-        maxHeight = 200;
+        minHeight = 0;
+        maxHeight = 100;
         height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
         minGap = 50;
         maxGap = 200;
