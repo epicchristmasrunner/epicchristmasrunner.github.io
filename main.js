@@ -98,7 +98,7 @@ function updateGameArea() {
     //=======
     var x, y;
   for (i = 0; i < myObstacles.length; i += 1) {
-    if (myGamePiece.crashWith(myObstacles[i])) {
+    if (person.crashWith(myObstacles[i])) {
       return;
     } 
   }
