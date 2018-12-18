@@ -4,7 +4,7 @@ var myObstacles = [];
 var spedman = 1;
 
 function startGame() {
-    backgroundMusic = new sound("https://ia801203.us.archive.org/25/items/TobyFoxMegalovania/Toby%20Fox%20-%20Megalovania.mp3");
+    backgroundMusic = new sound("Spectacular_Sound_Productions_-_01_-_Fu-Up-Jump (3).mp3");
     person = new component(30, 30, "santa.png", 10, 120, "image");
     backgroundMusic.play();
     gameArea.start();
