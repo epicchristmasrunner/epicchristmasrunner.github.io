@@ -106,7 +106,7 @@ function updateGameArea() {
   gameArea.frameNo += 1;
   if (gameArea.frameNo == 1 || everyinterval(150)) {
     x = gameArea.canvas.width;
-    y =  Math.floor((Math.random() * gameArea.canvas.height - 100) + gameArea.canvas.height - 50);
+    y =  Math.floor((Math.random() * gameArea.canvas.height - 50) + gameArea.canvas.height - 100);
     myObstacles.push(new component(10, 200, "green", x, y));
   }
   for (i = 0; i < myObstacles.length; i += 1) {
