@@ -69,6 +69,6 @@ function updateGameArea() {
     if (gameArea.key && gameArea.key == 39) {person.speedX = 4; }
     if (gameArea.key && gameArea.key == 38) {person.speedY = -4; }
     if (gameArea.key && gameArea.key == 40) {person.speedY = 4; }
-    person.newPos;
+    person.newPos();
     person.update();
 }
