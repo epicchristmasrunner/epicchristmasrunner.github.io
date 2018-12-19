@@ -2,6 +2,7 @@ var person;
 var backgroundMusic;
 var myObstacles = [];
 var spedman = 1;
+var core = 0;
 
 function startGame() {
     backgroundMusic = new sound("untitled.wav");
@@ -119,6 +120,9 @@ function sound(src) {
 
 function updateGameArea() {
     gameArea.clear();
+    ctx = gameArea.context;
+    ctx.font("30px cursive");
+    ctx.fillText(core, 100, 100);
     
     //=======
         var x, height, gap, minHeight, maxHeight, minGap, maxGap;
@@ -157,4 +161,5 @@ function updateGameArea() {
     person.newPos();
     person.update();
     spedman+=0.001;
+    core++;
 }
