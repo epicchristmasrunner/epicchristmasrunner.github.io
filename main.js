@@ -120,10 +120,6 @@ function sound(src) {
 
 function updateGameArea() {
     gameArea.clear();
-    ctx = gameArea.context;
-    ctx.fillText(core, 100, 100);
-    ctx.fillStyle = "brown";
-    ctx.fillRect(0, 300, gameArea.canvas.width, gameArea.canvas.height);
     
     //=======
         var x, height, gap, minHeight, maxHeight, minGap, maxGap;
@@ -163,4 +159,8 @@ function updateGameArea() {
     person.update();
     spedman+=0.001;
     core++;
+    ctx = gameArea.context;
+    ctx.fillText(core, 100, 100);
+    ctx.fillStyle = "brown";
+    ctx.fillRect(0, 300, gameArea.canvas.width, gameArea.canvas.height);
 }
