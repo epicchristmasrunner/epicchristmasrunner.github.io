@@ -121,7 +121,6 @@ function sound(src) {
 function updateGameArea() {
     gameArea.clear();
     ctx = gameArea.context;
-    ctx.font("30px cursive");
     ctx.fillText(core, 100, 100);
     
     //=======
