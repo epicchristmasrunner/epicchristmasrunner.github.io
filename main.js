@@ -31,6 +31,12 @@ var gameArea = {
         window.addEventListener('keyup', function (e) {
             gameArea.key = false;
         })
+        window.addEventListener('touchstart', function (e) {
+            gameArea.toocc = true;
+        })
+        window.addEventListener('touchend', function (e) {
+            gameArea.toocc = false;
+        })
         },
     clear : function() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -143,6 +149,7 @@ function updateGameArea() {
     
     person.speedX = 0;
     person.speedY = 0;
+    if (gameArea.toocc) {person.speedY = -4 }
     if (gameArea.key && gameArea.key == 37) {person.speedX = -4; }
     if (gameArea.key && gameArea.key == 39) {person.speedX = 4; }
     if (gameArea.key && gameArea.key == 38) {person.speedY = -4; }
