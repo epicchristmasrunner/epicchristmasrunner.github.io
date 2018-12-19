@@ -4,10 +4,15 @@ var myObstacles = [];
 var spedman = 1;
 
 function startGame() {
-    backgroundMusic = new sound("Spectacular_Sound_Productions_-_01_-_Fu-Up-Jump (3).mp3");
+    backgroundMusic = new sound("untitled.wav");
     person = new component(50, 50, "santa.png", 10, 120, "image");
-    backgroundMusic.play();
+    backgroundMusi();
     gameArea.start();
+}
+
+function backgroundMusi() {
+    backgroundMusic.play();
+    this.dur = backgroundMusic.sound.duration;
 }
 
 var gameArea = {
@@ -18,6 +23,7 @@ var gameArea = {
         this.context = this.canvas.getContext("2d");
         this.frameNo = 0; 
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        this.interv = setInterval(backgroundMusi, backgroundMusi.dur*1000);
         this.interval = setInterval(updateGameArea, 20);
         window.addEventListener('keydown', function (e) {
             gameArea.key = e.keyCode;
