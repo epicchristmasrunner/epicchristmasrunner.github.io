@@ -5,7 +5,7 @@ var spedman = 1;
 
 function startGame() {
     backgroundMusic = new sound("Spectacular_Sound_Productions_-_01_-_Fu-Up-Jump (3).mp3");
-    person = new component(30, 30, "santa.png", 10, 120, "image");
+    person = new component(50, 50, "santa.png", 10, 120, "image");
     backgroundMusic.play();
     gameArea.start();
 }
