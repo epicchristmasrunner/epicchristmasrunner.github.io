@@ -45,7 +45,7 @@ var gameArea = {
 }
 
 function everyinterval(n, s) {
-  if (((gameArea.frameNo + s) / n) % 1 == 0) {return true;}
+  if (((gameArea.frameNo - s) / n) % 1 == 0) {return true;}
   return false;
 }
 
