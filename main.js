@@ -1,7 +1,7 @@
 var person;
 var backgroundMusic;
 var myObstacles = [];
-var spedman = 1;
+var spedman = 3;
 var core = 0;
 
 function startGame() {
