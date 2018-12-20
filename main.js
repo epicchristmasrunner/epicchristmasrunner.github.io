@@ -131,7 +131,7 @@ function updateGameArea() {
     }
     gameArea.clear();
     gameArea.frameNo += 1;
-    if (gameArea.frameNo == 1 || everyinterval(150, spedman)) {
+    if (gameArea.frameNo == 1 || everyinterval(150, Math.ceil(spedman))) {
         x = gameArea.canvas.width;
         minHeight = window.innerHeight - 300;
         maxHeight = window.innerHeight - 130;
