@@ -44,8 +44,8 @@ var gameArea = {
     }
 }
 
-function everyinterval(n) {
-  if ((gameArea.frameNo / n) % 1 == 0) {return true;}
+function everyinterval(n, s) {
+  if (((gameArea.frameNo + s) / n) % 1 == 0) {return true;}
   return false;
 }
 
@@ -131,7 +131,7 @@ function updateGameArea() {
     }
     gameArea.clear();
     gameArea.frameNo += 1;
-    if (gameArea.frameNo == 1 || everyinterval(150)) {
+    if (gameArea.frameNo == 1 || everyinterval(150, spedman)) {
         x = gameArea.canvas.width;
         minHeight = window.innerHeight - 300;
         maxHeight = window.innerHeight - 130;
