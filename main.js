@@ -162,5 +162,5 @@ function updateGameArea() {
     ctx = gameArea.context;
     ctx.fillText(core, 100, 100);
     ctx.fillStyle = "brown";
-    ctx.fillRect(0, gameArea.canvas.height-(100+person.height), gameArea.canvas.width, gameArea.canvas.height);
+    ctx.fillRect(0, gameArea.canvas.height-(100-person.height), gameArea.canvas.width, gameArea.canvas.height);
 }
