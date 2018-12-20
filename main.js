@@ -139,8 +139,8 @@ function updateGameArea() {
         minGap = 100;
         maxGap = 200;
         gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
-        myObstacles.push(new component(10, height, "sketch1545270342913.png", x, 0, "image"));
-        myObstacles.push(new component(10, x - height - gap, "sketch1545270342913.png", x, height + gap, "image"));
+        myObstacles.push(new component(10, height, "candycane.png", x, 0, "image"));
+        myObstacles.push(new component(10, x - height - gap, "candycane.png", x, height + gap, "image"));
     }
     for (i = 0; i < myObstacles.length; i += 1) {
         myObstacles[i].x += -spedman;
